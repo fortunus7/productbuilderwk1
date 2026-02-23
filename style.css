@@ -95,6 +95,72 @@ body {
     align-items: center;
     font-size: 1.4rem;
     font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: background-color 0.3s;
-}
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        transition: background-color 0.3s;
+    }
+    
+    /* Contact Form Styles */
+    .divider {
+        margin: 2.5rem 0 1.5rem;
+        border: none;
+        border-top: 1px solid var(--text-color);
+        opacity: 0.1;
+    }
+    
+    .contact-section h3 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+        color: var(--text-color);
+    }
+    
+    .form-group {
+        margin-bottom: 0.8rem;
+    }
+    
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 0.8rem;
+        border-radius: 6px;
+        border: 1px solid var(--text-color);
+        background-color: transparent;
+        color: var(--text-color);
+        font-size: 0.9rem;
+        box-sizing: border-box;
+        transition: border-color 0.3s;
+        opacity: 0.8;
+    }
+    
+    input[type="email"]:focus,
+    textarea:focus {
+        outline: none;
+        border-color: var(--btn-bg);
+        opacity: 1;
+    }
+    
+    textarea {
+        min-height: 100px;
+        resize: vertical;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        background-color: var(--btn-bg);
+        color: var(--btn-text);
+        padding: 0.8rem;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: opacity 0.3s, transform 0.1s;
+    }
+    
+    .submit-btn:hover {
+        opacity: 0.9;
+    }
+    
+    .submit-btn:active {
+        transform: scale(0.98);
+    }
+    
