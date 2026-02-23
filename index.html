@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>Animal Face Test (Dog vs Cat)</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 </head>
 <body>
     <button id="theme-toggle">🌙 Dark Mode</button>
     <div class="container">
-        <h1>Lotto Number Generator</h1>
-        <button id="generate-btn">Generate Numbers</button>
-        <div id="numbers-container"></div>
+        <h1>Animal Face Test</h1>
+        <p class="subtitle">Are you a Dog or a Cat face?</p>
+        
+        <div id="upload-area">
+            <input type="file" id="image-input" accept="image/*" hidden>
+            <label for="image-input" id="upload-label">
+                <div class="upload-icon">📸</div>
+                <span>Click to upload your photo</span>
+            </label>
+        </div>
+
+        <div id="preview-container" style="display: none;">
+            <img id="face-image" src="" alt="your face">
+            <div id="loading" style="display: none;">Analyzing...</div>
+            <div id="result-container"></div>
+        </div>
+
+        <button id="retry-btn" style="display: none;">Try Again</button>
         
         <hr class="divider">
         
